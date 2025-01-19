@@ -28,4 +28,11 @@
 
 import './index.css';
 
+document.addEventListener('DOMContentLoaded', () => {
+    if (window.electronAPI && window.electronAPI.updateModelsList) {
+      window.electronAPI.updateModelsList();
+    }
+  });
+
+
 console.log('👋 This message is being logged by "renderer.js", included via webpack');
